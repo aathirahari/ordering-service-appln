@@ -35,6 +35,7 @@ import com.eatza.order.model.Order;
 import com.eatza.order.model.OrderedItem;
 import com.eatza.order.repository.OrderRepository;
 import com.eatza.order.service.itemservice.ItemServiceImpl;
+import com.eatza.order.service.orderservice.KafkaSender;
 import com.eatza.order.service.orderservice.OrderServiceImpl;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -52,6 +53,9 @@ public class OrderServiceTest {
 
 	@Mock
 	private RestTemplate restTemplate;
+	
+	@Mock 
+	private KafkaSender kafkaSender;
 
 
 
